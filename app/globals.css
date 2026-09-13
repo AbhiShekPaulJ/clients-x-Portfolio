@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-paper text-ink antialiased;
+    font-feature-settings: "ss01" on, "cv01" on;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif text-ink;
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    @apply bg-sage-200 text-sage-900;
+  }
+
+  /* Visible, high-contrast keyboard focus ring throughout */
+  :focus-visible {
+    outline: 2px solid theme("colors.sage.600");
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-6 sm:px-8 lg:px-10;
+  }
+
+  .section-pad {
+    @apply py-20 sm:py-28;
+  }
+
+  /* Soft organic frame used for the profile portrait placeholder */
+  .organic-frame {
+    border-radius: 42% 58% 61% 39% / 45% 40% 60% 55%;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
