@@ -1,4 +1,4 @@
-# Sowmya Jillella — Portfolio
+Portfolio
 
 A premium, responsive portfolio site for Sowmya Jillella, Clinical Dietitian &
 Nutritionist, built for hospital HR teams, clinical nutrition departments, and
